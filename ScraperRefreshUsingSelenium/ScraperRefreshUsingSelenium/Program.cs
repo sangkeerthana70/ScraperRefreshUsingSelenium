@@ -12,7 +12,7 @@ namespace ScraperRefreshUsingSelenium
         static void Main(string[] args)
         {
             var options = new ChromeOptions();
-            options.AddArgument("--headless");
+            //options.AddArgument("--headless");
             options.AddArguments("--disable-gpu");
             options.AddArguments("disable-popup-blocking");//to disable pop-up blocking
 
@@ -39,10 +39,10 @@ namespace ScraperRefreshUsingSelenium
 
             foreach(var item in items)
             {
-                Console.WriteLine("My WatchList: " + item);
+                Console.WriteLine("My WatchList: " + item.ToString());
             }
 
-            chromeDriver.Close();
+            //chromeDriver.Close();
         }       
     }
 }
