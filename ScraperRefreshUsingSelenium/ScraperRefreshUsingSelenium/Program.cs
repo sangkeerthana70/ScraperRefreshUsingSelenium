@@ -32,20 +32,21 @@ namespace ScraperRefreshUsingSelenium
 
             chromeDriver.Url = "https://finance.yahoo.com/portfolio/p_1/view/v1";
             Console.WriteLine("In yahoo finance page");
+            /*
+           
+            var closePopup = chromeDriver.FindElementByXPath("//dialog[@id = '__dialog']/section/button");
+            closePopup.Click();
+            var items = chromeDriver.FindElementsByXPath("//*[@id=\"main\"]/section/section[2]/div[2]/table/tbody/tr[*]/td[*]");
 
-            ////var closePopup = chromeDriver.FindElementByXPath("//*[@id=\"fin - tradeit\"]/div[2]/div");
-            //var closePopup = chromeDriver.FindElementByXPath("//dialog[@id = '__dialog']/section/button");
-            //closePopup.Click();
-            //var items = chromeDriver.FindElementsByXPath("//*[@id=\"main\"]/section/section[2]/div[2]/table/tbody/tr[*]/td[*]/span/a");
+            foreach(var item in items)
+            {
+                Console.WriteLine("My WatchList: " + item.Text);
+            }
+            */
+            
+            
 
-            //foreach(var item in items)
-            //{
-            //    Console.WriteLine("My WatchList: " + item.Text);
-            //}
-
-            ////chromeDriver.Close();
-
-
+            
             //var closePopup = chromeDriver.FindElementByXPath("//*[@id=\"fin - tradeit\"]/div[2]/div");
             var closePopup = chromeDriver.FindElementByXPath("//dialog[@id = '__dialog']/section/button");
             closePopup.Click();
@@ -82,15 +83,15 @@ namespace ScraperRefreshUsingSelenium
                 stock.AverageVolume = avgVolume;
                 Console.WriteLine(marketCap);
                 stock.MarketCap = marketCap;
-                
+
 
                 //result.Add(stock);
 
+                //chromeDriver.Close();
+
+
+
             }
-            
-            
-
-
 
         }
     }
